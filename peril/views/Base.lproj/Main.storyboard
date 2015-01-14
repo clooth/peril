@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LVB-YS-i5n">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+            <string>Montserrat-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="CtS-rA-C9T">
+            <objects>
+                <viewController id="LVB-YS-i5n" customClass="GameViewController" customModule="peril" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
+                        <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbG-aR-5n9">
+                                <rect key="frame" x="195" y="246" width="210" height="108"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERIL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBV-kG-Er1">
+                                        <rect key="frame" x="20" y="20" width="170" height="30"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRE-ALPHA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5b-ws-tIY">
+                                        <rect key="frame" x="20" y="58" width="170" height="30"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                        <color key="textColor" red="1" green="0.4597720401" blue="0.33293796440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="7xN-hk-SKj"/>
+                                    <constraint firstAttribute="trailing" secondItem="BBV-kG-Er1" secondAttribute="trailing" constant="20" id="PuH-8M-a2K"/>
+                                    <constraint firstAttribute="bottom" secondItem="w5b-ws-tIY" secondAttribute="bottom" constant="20" id="VWk-Fk-HZq"/>
+                                    <constraint firstItem="BBV-kG-Er1" firstAttribute="height" secondItem="w5b-ws-tIY" secondAttribute="height" id="ZcI-w9-a0V"/>
+                                    <constraint firstItem="w5b-ws-tIY" firstAttribute="top" secondItem="BBV-kG-Er1" secondAttribute="bottom" constant="8" id="eLV-EQ-AOx"/>
+                                    <constraint firstItem="BBV-kG-Er1" firstAttribute="leading" secondItem="vbG-aR-5n9" secondAttribute="leading" constant="20" id="lEi-aM-EB3"/>
+                                    <constraint firstAttribute="width" constant="210" id="p72-ce-ofd"/>
+                                    <constraint firstItem="w5b-ws-tIY" firstAttribute="leading" secondItem="vbG-aR-5n9" secondAttribute="leading" constant="20" id="p8N-DY-NTI"/>
+                                    <constraint firstAttribute="trailing" secondItem="w5b-ws-tIY" secondAttribute="trailing" constant="20" id="vr6-C1-hPq"/>
+                                    <constraint firstItem="BBV-kG-Er1" firstAttribute="top" secondItem="vbG-aR-5n9" secondAttribute="top" constant="20" id="yVQ-LC-HeT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="vbG-aR-5n9" secondAttribute="centerY" id="1pt-eu-XLF"/>
+                            <constraint firstAttribute="centerX" secondItem="vbG-aR-5n9" secondAttribute="centerX" id="TDH-oO-l9f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="w5b-ws-tIY" id="RQr-rV-IbY"/>
+                        <outlet property="titleLabel" destination="BBV-kG-Er1" id="Cal-MH-Xh3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
