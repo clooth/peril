@@ -16,6 +16,7 @@
 		03E380DD1A66C7E5009A7C0C /* perilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E380DC1A66C7E5009A7C0C /* perilTests.swift */; };
 		03E380EB1A66CA1A009A7C0C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E380E91A66C915009A7C0C /* Montserrat-Bold.ttf */; };
 		03E380EC1A66CA1A009A7C0C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E380EA1A66C915009A7C0C /* Montserrat-Regular.ttf */; };
+		4968AB4D0879CA8FEC10B37F /* Pods_peril.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB12AE689575619ADE8E778C /* Pods_peril.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,9 @@
 		03E380DC1A66C7E5009A7C0C /* perilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perilTests.swift; sourceTree = "<group>"; };
 		03E380E91A66C915009A7C0C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		03E380EA1A66C915009A7C0C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		1EE7DE5638E512A91BC30DB5 /* Pods-peril.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peril.release.xcconfig"; path = "Pods/Target Support Files/Pods-peril/Pods-peril.release.xcconfig"; sourceTree = "<group>"; };
+		5678D3C9E3257AD1452384B7 /* Pods-peril.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peril.debug.xcconfig"; path = "Pods/Target Support Files/Pods-peril/Pods-peril.debug.xcconfig"; sourceTree = "<group>"; };
+		CB12AE689575619ADE8E778C /* Pods_peril.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_peril.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4968AB4D0879CA8FEC10B37F /* Pods_peril.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,8 @@
 				03E380BF1A66C7E5009A7C0C /* peril */,
 				03E380D91A66C7E5009A7C0C /* perilTests */,
 				03E380BE1A66C7E5009A7C0C /* Products */,
+				10E2ECF107086130446C6D5C /* Pods */,
+				931B1F4BA13733A51AD40821 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +176,23 @@
 			path = classes;
 			sourceTree = "<group>";
 		};
+		10E2ECF107086130446C6D5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5678D3C9E3257AD1452384B7 /* Pods-peril.debug.xcconfig */,
+				1EE7DE5638E512A91BC30DB5 /* Pods-peril.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		931B1F4BA13733A51AD40821 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB12AE689575619ADE8E778C /* Pods_peril.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03E380E01A66C7E5009A7C0C /* Build configuration list for PBXNativeTarget "peril" */;
 			buildPhases = (
+				07039BE5403898947B400B38 /* Check Pods Manifest.lock */,
 				03E380B91A66C7E5009A7C0C /* Sources */,
 				03E380BA1A66C7E5009A7C0C /* Frameworks */,
 				03E380BB1A66C7E5009A7C0C /* Resources */,
+				964498B2BF47F87F350BFB11 /* Embed Pods Frameworks */,
+				4588CA5CC7249CED9A0D24AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +292,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07039BE5403898947B400B38 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4588CA5CC7249CED9A0D24AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-peril/Pods-peril-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		964498B2BF47F87F350BFB11 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-peril/Pods-peril-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03E380B91A66C7E5009A7C0C /* Sources */ = {
@@ -394,6 +469,7 @@
 		};
 		03E380E11A66C7E5009A7C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5678D3C9E3257AD1452384B7 /* Pods-peril.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "peril/Supporting Files/Info.plist";
@@ -404,6 +480,7 @@
 		};
 		03E380E21A66C7E5009A7C0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EE7DE5638E512A91BC30DB5 /* Pods-peril.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "peril/Supporting Files/Info.plist";
