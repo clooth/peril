@@ -10,3 +10,6 @@
 	path = Carthage/Checkouts/Nimble
 	url = https://github.com/Quick/Nimble.git
 	ignore = dirty
+[submodule "Dollar.swift"]
+	path = Dollar.swift
+	url = git@github.com:ankurp/Dollar.swift.git
