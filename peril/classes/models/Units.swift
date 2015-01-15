@@ -22,12 +22,14 @@ public class Unit: NSObject
   public var constitution: Int
   public var maxConstitution: Int
 
+  // Whether or not the unit has been damaged in combat
   public var isDamaged: Bool {
     get {
       return constitution < maxConstitution
     }
   }
 
+  // Whether or not the unit is dead and cannot do anything
   public var isDead: Bool {
     get {
       return constitution <= 0
@@ -36,8 +38,6 @@ public class Unit: NSObject
 
   // Strength determines
   public var strength: Int
-
-  // Dynamic properties
 
 
   // MARK: Initializers
@@ -68,8 +68,10 @@ public class Unit: NSObject
     // Check what the maximum heal amount is (up to maxConstitution)
     let realAmount = min(amount, max(maxConstitution - constitution, 0))
 
-    // We can only go up to max health
+    // If we're actually healing any
     if realAmount > 0 {
+      NSLog("Unit \(name) healed by \(amount) constitution.")
+
       constitution += realAmount
     }
   }
