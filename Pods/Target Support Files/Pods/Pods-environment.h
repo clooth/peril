@@ -6,6 +6,12 @@
 // project.
 
 
+// Alamofire
+#define COCOAPODS_POD_AVAILABLE_Alamofire
+#define COCOAPODS_VERSION_MAJOR_Alamofire 1
+#define COCOAPODS_VERSION_MINOR_Alamofire 1
+#define COCOAPODS_VERSION_PATCH_Alamofire 3
+
 // Dollar
 #define COCOAPODS_POD_AVAILABLE_Dollar
 #define COCOAPODS_VERSION_MAJOR_Dollar 2

@@ -1,9 +1,11 @@
 PODS:
+  - Alamofire (1.1.3)
   - Dollar (2.1.0)
   - Nimble (0.2.0)
   - Quick (0.2.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 1.1)
   - Dollar (~> 2.1)
   - Nimble (from `https://github.com/Quick/Nimble`)
   - Quick (from `https://github.com/Quick/Quick`, tag `v0.2.2`)
@@ -24,6 +26,7 @@ CHECKOUT OPTIONS:
     :tag: v0.2.2
 
 SPEC CHECKSUMS:
+  Alamofire: 4337b1484a062640f8caf6e96f03a511bf137536
   Dollar: 9e9f96a3e037f3ba4278b0eae1095b110b55c238
   Nimble: 79679d4cd5a3710db75e1dd9f5479f71842da6a6
   Quick: fdcce541eb5d73f5ac78f95c770ca6d6d69f0b81

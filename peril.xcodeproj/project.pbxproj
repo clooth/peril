@@ -17,6 +17,8 @@
 		03E380EB1A66CA1A009A7C0C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E380E91A66C915009A7C0C /* Montserrat-Bold.ttf */; };
 		03E380EC1A66CA1A009A7C0C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E380EA1A66C915009A7C0C /* Montserrat-Regular.ttf */; };
 		03E380F41A66D9AE009A7C0C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E380F31A66D9AE009A7C0C /* Units.swift */; };
+		03F0B9BB1A68173E009B6200 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F0B9B81A681724009B6200 /* Surge.framework */; };
+		1C522E6A8B08434B90557329 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBCC67F8DDDCCD48C75AFF4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4968AB4D0879CA8FEC10B37F /* Pods_peril.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB12AE689575619ADE8E778C /* Pods_peril.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		68A0A500867350395116C317 /* Pods_perilTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38504A5D1C2F72FF4C2FF189 /* Pods_perilTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -28,6 +30,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 03E380BC1A66C7E5009A7C0C;
 			remoteInfo = peril;
+		};
+		03F0B9B71A681724009B6200 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03F0B9B21A681724009B6200 /* Surge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8A1E1AA19917A79009735E2;
+			remoteInfo = Surge;
+		};
+		03F0B9B91A681724009B6200 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03F0B9B21A681724009B6200 /* Surge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F84A6AAE19A9A72F007B53E1;
+			remoteInfo = SurgeTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,12 +62,14 @@
 		03E380E91A66C915009A7C0C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		03E380EA1A66C915009A7C0C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		03E380F31A66D9AE009A7C0C /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
-		1EE7DE5638E512A91BC30DB5 /* Pods-peril.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peril.release.xcconfig"; path = "Pods/Target Support Files/Pods-peril/Pods-peril.release.xcconfig"; sourceTree = "<group>"; };
+		03F0B9B21A681724009B6200 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = Surge/Surge.xcodeproj; sourceTree = "<group>"; };
+		0C9600A2E8D7427AC072175B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		10925FCC98C66792B3181DD0 /* Pods-perilTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-perilTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-perilTests/Pods-perilTests.release.xcconfig"; sourceTree = "<group>"; };
 		38504A5D1C2F72FF4C2FF189 /* Pods_perilTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_perilTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5678D3C9E3257AD1452384B7 /* Pods-peril.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peril.debug.xcconfig"; path = "Pods/Target Support Files/Pods-peril/Pods-peril.debug.xcconfig"; sourceTree = "<group>"; };
-		56A124C8E929D4EED739B1AC /* Pods-perilTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-perilTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-perilTests/Pods-perilTests.release.xcconfig"; sourceTree = "<group>"; };
+		70439016BB7C8B3B7498F03B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B8FC61E6DE9086041E3B58C3 /* Pods-perilTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-perilTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-perilTests/Pods-perilTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB12AE689575619ADE8E778C /* Pods_peril.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_peril.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5181C0623ED84B0CF59570A /* Pods-perilTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-perilTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-perilTests/Pods-perilTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBBCC67F8DDDCCD48C75AFF4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F0B9BB1A68173E009B6200 /* Surge.framework in Frameworks */,
 				4968AB4D0879CA8FEC10B37F /* Pods_peril.framework in Frameworks */,
+				1C522E6A8B08434B90557329 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +100,8 @@
 				03E380BF1A66C7E5009A7C0C /* peril */,
 				03E380D91A66C7E5009A7C0C /* perilTests */,
 				03E380BE1A66C7E5009A7C0C /* Products */,
-				10E2ECF107086130446C6D5C /* Pods */,
 				931B1F4BA13733A51AD40821 /* Frameworks */,
+				2C8FBB58D16CABB62E034A76 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,13 +212,22 @@
 			path = models;
 			sourceTree = "<group>";
 		};
-		10E2ECF107086130446C6D5C /* Pods */ = {
+		03F0B9B31A681724009B6200 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5678D3C9E3257AD1452384B7 /* Pods-peril.debug.xcconfig */,
-				1EE7DE5638E512A91BC30DB5 /* Pods-peril.release.xcconfig */,
-				F5181C0623ED84B0CF59570A /* Pods-perilTests.debug.xcconfig */,
-				56A124C8E929D4EED739B1AC /* Pods-perilTests.release.xcconfig */,
+				03F0B9B81A681724009B6200 /* Surge.framework */,
+				03F0B9BA1A681724009B6200 /* SurgeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C8FBB58D16CABB62E034A76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70439016BB7C8B3B7498F03B /* Pods.debug.xcconfig */,
+				0C9600A2E8D7427AC072175B /* Pods.release.xcconfig */,
+				B8FC61E6DE9086041E3B58C3 /* Pods-perilTests.debug.xcconfig */,
+				10925FCC98C66792B3181DD0 /* Pods-perilTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -206,8 +235,10 @@
 		931B1F4BA13733A51AD40821 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03F0B9B21A681724009B6200 /* Surge.xcodeproj */,
 				CB12AE689575619ADE8E778C /* Pods_peril.framework */,
 				38504A5D1C2F72FF4C2FF189 /* Pods_perilTests.framework */,
+				CBBCC67F8DDDCCD48C75AFF4 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -285,6 +316,12 @@
 			mainGroup = 03E380B41A66C7E5009A7C0C;
 			productRefGroup = 03E380BE1A66C7E5009A7C0C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 03F0B9B31A681724009B6200 /* Products */;
+					ProjectRef = 03F0B9B21A681724009B6200 /* Surge.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				03E380BC1A66C7E5009A7C0C /* peril */,
@@ -292,6 +329,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		03F0B9B81A681724009B6200 /* Surge.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Surge.framework;
+			remoteRef = 03F0B9B71A681724009B6200 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03F0B9BA1A681724009B6200 /* SurgeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SurgeTests.xctest;
+			remoteRef = 03F0B9B91A681724009B6200 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		03E380BB1A66C7E5009A7C0C /* Resources */ = {
@@ -343,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-peril/Pods-peril-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		964498B2BF47F87F350BFB11 /* Embed Pods Frameworks */ = {
@@ -358,7 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-peril/Pods-peril-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D32A367BD881EAEECBC49E0E /* Copy Pods Resources */ = {
@@ -537,7 +591,7 @@
 		};
 		03E380E11A66C7E5009A7C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5678D3C9E3257AD1452384B7 /* Pods-peril.debug.xcconfig */;
+			baseConfigurationReference = 70439016BB7C8B3B7498F03B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
@@ -550,7 +604,7 @@
 		};
 		03E380E21A66C7E5009A7C0C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EE7DE5638E512A91BC30DB5 /* Pods-peril.release.xcconfig */;
+			baseConfigurationReference = 0C9600A2E8D7427AC072175B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
@@ -563,7 +617,7 @@
 		};
 		03E380E41A66C7E5009A7C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5181C0623ED84B0CF59570A /* Pods-perilTests.debug.xcconfig */;
+			baseConfigurationReference = B8FC61E6DE9086041E3B58C3 /* Pods-perilTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -586,7 +640,7 @@
 		};
 		03E380E51A66C7E5009A7C0C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56A124C8E929D4EED739B1AC /* Pods-perilTests.release.xcconfig */;
+			baseConfigurationReference = 10925FCC98C66792B3181DD0 /* Pods-perilTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
