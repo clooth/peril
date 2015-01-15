@@ -12,7 +12,7 @@ import Peril
 
 var unitFactoryCounter: Int = 0
 
-class UnitFactory: NSObject {
+class UnitFactory {
 
   class func unit() -> Unit {
     let unit = Unit(name: "Jones #\(unitFactoryCounter)", constitution: Int(arc4random_uniform(100) + 1), strength: Int(arc4random_uniform(20) + 1))
@@ -31,11 +31,20 @@ class UnitFactory: NSObject {
 }
 
 
-class PartyFactory: NSObject {
+class PartyFactory {
 
   class func party(unitCount: Int) -> Party {
     return Party(units: UnitFactory.units(unitCount))
   }
 
+
+}
+
+
+class PlayerFactory {
+
+  class func player() -> Player {
+    return Player(party: PartyFactory.party(4))
+  }
 
 }
