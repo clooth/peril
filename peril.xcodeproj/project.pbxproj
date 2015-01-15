@@ -15,6 +15,7 @@
 		030627691A6835DA00204381 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 032894731A682B4F00B15EA1 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0306276E1A683C2400204381 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306276D1A683C2400204381 /* Players.swift */; };
 		030627711A683D6900204381 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030627701A683D6900204381 /* PlayerTests.swift */; };
+		030627741A6841EF00204381 /* Battles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030627731A6841EF00204381 /* Battles.swift */; };
 		0328947B1A6832F300B15EA1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032894791A6832F300B15EA1 /* Alamofire.framework */; };
 		032894871A6833C600B15EA1 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032894841A6833BF00B15EA1 /* Dollar.framework */; };
 		032894891A68345600B15EA1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0328947A1A6832F300B15EA1 /* Nimble.framework */; };
@@ -93,6 +94,7 @@
 		0303B8601A67CFA80009C8A5 /* UnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		0306276D1A683C2400204381 /* Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		030627701A683D6900204381 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		030627731A6841EF00204381 /* Battles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battles.swift; sourceTree = "<group>"; };
 		032894731A682B4F00B15EA1 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		032894791A6832F300B15EA1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		0328947A1A6832F300B15EA1 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				03E380F31A66D9AE009A7C0C /* Units.swift */,
 				039806E81A67FAE0005C8E9F /* Parties.swift */,
 				0306276D1A683C2400204381 /* Players.swift */,
+				030627731A6841EF00204381 /* Battles.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -340,7 +343,6 @@
 				TargetAttributes = {
 					03E380BC1A66C7E5009A7C0C = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = HK8Y3LRY79;
 					};
 					03E380D51A66C7E5009A7C0C = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -421,6 +423,7 @@
 				03E380C71A66C7E5009A7C0C /* GameScene.swift in Sources */,
 				039806E91A67FAE0005C8E9F /* Parties.swift in Sources */,
 				03E380C91A66C7E5009A7C0C /* GameViewController.swift in Sources */,
+				030627741A6841EF00204381 /* Battles.swift in Sources */,
 				03E380C31A66C7E5009A7C0C /* AppDelegate.swift in Sources */,
 				03E380F41A66D9AE009A7C0C /* Units.swift in Sources */,
 			);
@@ -553,7 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nico Hamalainen (7P79H3P3XX)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -563,7 +566,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_MODULE_NAME = Peril;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dba4ac36-eda6-41f8-9c5e-a8c20388caf4";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -571,7 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nico Hamalainen (7P79H3P3XX)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,7 +584,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_MODULE_NAME = Peril;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dba4ac36-eda6-41f8-9c5e-a8c20388caf4";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
