@@ -1,0 +1,1 @@
+PODS_PERILTESTS_DOLLAR_OTHER_LDFLAGS = -framework "Foundation"

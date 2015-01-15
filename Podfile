@@ -3,12 +3,11 @@ platform :ios, '8.0'
 
 inhibit_all_warnings!
 
-target 'peril' do
-
 # Functional toolbelt
 pod 'Dollar', '~> 2.1'
 
-end
+# Networking
+pod 'Alamofire', '~> 1.1'
 
 target 'perilTests' do
 

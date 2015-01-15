@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import Dollar
+import Surge
 
 // Each ally hero as well as enemy mob is an Unit and they all include
 // mostly the same type of data for use in the gameplay.
 
-public class Unit: NSObject
+public class Unit: NSObject, Printable
 {
   // MARK: Attributes
 
@@ -22,21 +24,7 @@ public class Unit: NSObject
   public var constitution: Int
   public var maxConstitution: Int
 
-  // Whether or not the unit has been damaged in combat
-  public var isDamaged: Bool {
-    get {
-      return constitution < maxConstitution
-    }
-  }
-
-  // Whether or not the unit is dead and cannot do anything
-  public var isDead: Bool {
-    get {
-      return constitution <= 0
-    }
-  }
-
-  // Strength determines
+  // Strength determines how much damage we deal in combat
   public var strength: Int
 
 
@@ -51,7 +39,31 @@ public class Unit: NSObject
     super.init()
   }
 
-  // MARK: Combat
+  // MARK: Protocols
+
+  public override var description: String {
+    return "[Unit: \(name) \(constitution)/\(maxConstitution) CON, \(strength) STR]"
+  }
+
+}
+
+// MARK: Unit Combat
+
+public extension Unit {
+
+  // Whether or not the unit has been damaged in combat
+  public var isDamaged: Bool {
+    get {
+      return constitution < maxConstitution
+    }
+  }
+
+  // Whether or not the unit is dead and cannot do anything
+  public var isDead: Bool {
+    get {
+      return constitution <= 0
+    }
+  }
 
   public func damage(amount: Int) {
     // We can only go down to 0 health
@@ -77,4 +89,3 @@ public class Unit: NSObject
   }
 
 }
-
