@@ -9,16 +9,16 @@
 import Foundation
 
 
-class Battle: NSObject {
+public class Battle: NSObject {
 
   // MARK: Attributes
 
-  var playerA: Player
-  var playerB: Player
+  public var playerA: Player
+  public var playerB: Player
 
   // MARK: Initializers
 
-  init(playerA: Player, playerB: Player) {
+  public init(playerA: Player, playerB: Player) {
     self.playerA = playerA
     self.playerB = playerB
 
