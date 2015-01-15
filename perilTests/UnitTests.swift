@@ -9,7 +9,6 @@
 import Foundation
 import Quick
 import Nimble
-import Dollar
 import Peril
 
 class UnitSpec: QuickSpec {
