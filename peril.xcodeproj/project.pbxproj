@@ -7,22 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0303B8611A67CFA80009C8A5 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0303B8601A67CFA80009C8A5 /* UnitTests.swift */; };
 		030627621A68354800204381 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032894841A6833BF00B15EA1 /* Dollar.framework */; };
 		030627661A6835DA00204381 /* Dollar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 032894841A6833BF00B15EA1 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		030627671A6835DA00204381 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 032894791A6832F300B15EA1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		030627681A6835DA00204381 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0328947A1A6832F300B15EA1 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		030627691A6835DA00204381 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 032894731A682B4F00B15EA1 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0306276E1A683C2400204381 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306276D1A683C2400204381 /* Players.swift */; };
-		030627711A683D6900204381 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030627701A683D6900204381 /* PlayerTests.swift */; };
 		030627741A6841EF00204381 /* Battles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030627731A6841EF00204381 /* Battles.swift */; };
+		030627861A68524200204381 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030627851A68524200204381 /* Events.swift */; };
 		0328947B1A6832F300B15EA1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032894791A6832F300B15EA1 /* Alamofire.framework */; };
 		032894871A6833C600B15EA1 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032894841A6833BF00B15EA1 /* Dollar.framework */; };
 		032894891A68345600B15EA1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0328947A1A6832F300B15EA1 /* Nimble.framework */; };
 		0328948A1A68345600B15EA1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032894731A682B4F00B15EA1 /* Quick.framework */; };
 		039806E91A67FAE0005C8E9F /* Parties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039806E81A67FAE0005C8E9F /* Parties.swift */; };
-		039806EB1A67FAF6005C8E9F /* PartyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039806EA1A67FAF6005C8E9F /* PartyTests.swift */; };
-		039806EE1A67FBE7005C8E9F /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039806ED1A67FBE7005C8E9F /* Factories.swift */; };
 		03E380C31A66C7E5009A7C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E380C21A66C7E5009A7C0C /* AppDelegate.swift */; };
 		03E380C71A66C7E5009A7C0C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E380C61A66C7E5009A7C0C /* GameScene.swift */; };
 		03E380C91A66C7E5009A7C0C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E380C81A66C7E5009A7C0C /* GameViewController.swift */; };
@@ -33,6 +30,7 @@
 		03E380EC1A66CA1A009A7C0C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E380EA1A66C915009A7C0C /* Montserrat-Regular.ttf */; };
 		03E380F41A66D9AE009A7C0C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E380F31A66D9AE009A7C0C /* Units.swift */; };
 		EC982D981A6850F800ED801C /* Loot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC982D971A6850F800ED801C /* Loot.swift */; };
+		03F2DC8D1A6ADDEA009A7049 /* GameObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2DC8C1A6ADDEA009A7049 /* GameObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,17 +90,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0303B8601A67CFA80009C8A5 /* UnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		0306276D1A683C2400204381 /* Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
-		030627701A683D6900204381 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		030627731A6841EF00204381 /* Battles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battles.swift; sourceTree = "<group>"; };
+		030627851A68524200204381 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		032894731A682B4F00B15EA1 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		032894791A6832F300B15EA1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		0328947A1A6832F300B15EA1 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		0328947E1A6833BF00B15EA1 /* Dollar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dollar.xcodeproj; path = Dollar.swift/Dollar/Dollar.xcodeproj; sourceTree = "<group>"; };
 		039806E81A67FAE0005C8E9F /* Parties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parties.swift; sourceTree = "<group>"; };
-		039806EA1A67FAF6005C8E9F /* PartyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyTests.swift; sourceTree = "<group>"; };
-		039806ED1A67FBE7005C8E9F /* Factories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 		03E380BD1A66C7E5009A7C0C /* peril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peril.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E380C11A66C7E5009A7C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03E380C21A66C7E5009A7C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +112,7 @@
 		03E380EA1A66C915009A7C0C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		03E380F31A66D9AE009A7C0C /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		EC982D971A6850F800ED801C /* Loot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loot.swift; sourceTree = "<group>"; };
+		03F2DC8C1A6ADDEA009A7049 /* GameObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,14 +145,6 @@
 				032894861A6833BF00B15EA1 /* DollarTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		039806EC1A67FBDC005C8E9F /* util */ = {
-			isa = PBXGroup;
-			children = (
-				039806ED1A67FBE7005C8E9F /* Factories.swift */,
-			);
-			name = util;
 			sourceTree = "<group>";
 		};
 		03E380B41A66C7E5009A7C0C = {
@@ -200,11 +188,7 @@
 		03E380D91A66C7E5009A7C0C /* perilTests */ = {
 			isa = PBXGroup;
 			children = (
-				039806EC1A67FBDC005C8E9F /* util */,
-				039806EA1A67FAF6005C8E9F /* PartyTests.swift */,
-				0303B8601A67CFA80009C8A5 /* UnitTests.swift */,
 				03E380DA1A66C7E5009A7C0C /* Supporting Files */,
-				030627701A683D6900204381 /* PlayerTests.swift */,
 			);
 			path = perilTests;
 			sourceTree = "<group>";
@@ -279,6 +263,8 @@
 				0306276D1A683C2400204381 /* Players.swift */,
 				030627731A6841EF00204381 /* Battles.swift */,
 				EC982D971A6850F800ED801C /* Loot.swift */,
+				030627851A68524200204381 /* Events.swift */,
+				03F2DC8C1A6ADDEA009A7049 /* GameObjects.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -424,9 +410,11 @@
 			files = (
 				0306276E1A683C2400204381 /* Players.swift in Sources */,
 				03E380C71A66C7E5009A7C0C /* GameScene.swift in Sources */,
+				03F2DC8D1A6ADDEA009A7049 /* GameObjects.swift in Sources */,
 				039806E91A67FAE0005C8E9F /* Parties.swift in Sources */,
 				EC982D981A6850F800ED801C /* Loot.swift in Sources */,
 				03E380C91A66C7E5009A7C0C /* GameViewController.swift in Sources */,
+				030627861A68524200204381 /* Events.swift in Sources */,
 				030627741A6841EF00204381 /* Battles.swift in Sources */,
 				03E380C31A66C7E5009A7C0C /* AppDelegate.swift in Sources */,
 				03E380F41A66D9AE009A7C0C /* Units.swift in Sources */,
@@ -437,10 +425,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030627711A683D6900204381 /* PlayerTests.swift in Sources */,
-				039806EE1A67FBE7005C8E9F /* Factories.swift in Sources */,
-				039806EB1A67FAF6005C8E9F /* PartyTests.swift in Sources */,
-				0303B8611A67CFA80009C8A5 /* UnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
