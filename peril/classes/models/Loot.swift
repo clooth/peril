@@ -50,7 +50,7 @@ public class InventoryItem: NSObject, Printable {
         if self.specialName != nil {
             return self.specialName!
         }
-        return " ".join(self.affixes.map {$0.description}) + " " + self.itemSequence.description
+        return " ".join(self.affixes.map {$0.description}) + " " + self.itemSequence.properName
     }
 }
 
@@ -70,6 +70,11 @@ public class ItemAffix: NSObject, Printable {
 public class ItemSequence: NSObject, Printable {
     var parent: ItemSequence?
     var affixTable: [AffixTableItem] = []
+    var properName: String
+    
+    public init(properName:String) {
+        self.properName = properName
+    }
 }
 
 public class AffixTableItem: NSObject {

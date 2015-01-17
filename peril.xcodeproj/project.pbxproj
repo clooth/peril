@@ -32,6 +32,7 @@
 		03E380EB1A66CA1A009A7C0C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E380E91A66C915009A7C0C /* Montserrat-Bold.ttf */; };
 		03E380EC1A66CA1A009A7C0C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E380EA1A66C915009A7C0C /* Montserrat-Regular.ttf */; };
 		03E380F41A66D9AE009A7C0C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E380F31A66D9AE009A7C0C /* Units.swift */; };
+		EC982D981A6850F800ED801C /* Loot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC982D971A6850F800ED801C /* Loot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		03E380E91A66C915009A7C0C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		03E380EA1A66C915009A7C0C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		03E380F31A66D9AE009A7C0C /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		EC982D971A6850F800ED801C /* Loot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 				039806E81A67FAE0005C8E9F /* Parties.swift */,
 				0306276D1A683C2400204381 /* Players.swift */,
 				030627731A6841EF00204381 /* Battles.swift */,
+				EC982D971A6850F800ED801C /* Loot.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				0306276E1A683C2400204381 /* Players.swift in Sources */,
 				03E380C71A66C7E5009A7C0C /* GameScene.swift in Sources */,
 				039806E91A67FAE0005C8E9F /* Parties.swift in Sources */,
+				EC982D981A6850F800ED801C /* Loot.swift in Sources */,
 				03E380C91A66C7E5009A7C0C /* GameViewController.swift in Sources */,
 				030627741A6841EF00204381 /* Battles.swift in Sources */,
 				03E380C31A66C7E5009A7C0C /* AppDelegate.swift in Sources */,
