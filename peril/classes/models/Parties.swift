@@ -52,6 +52,10 @@ public extension Party {
     }
   }
 
+  public func isDead() -> Bool {
+    return $.every(units) { $0.isDead }
+  }
+
   public subscript(index: Int) -> Unit {
     get {
       assert(index < units.count, "Index out of range")
@@ -62,5 +66,9 @@ public extension Party {
       assert(index < units.count, "Index out of range")
       units[index] = newValue
     }
+  }
+
+  public func removeUnit(unit: Unit) {
+    units = units.filter( {$0 != unit} )
   }
 }

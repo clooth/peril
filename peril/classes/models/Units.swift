@@ -13,11 +13,14 @@ import Dollar
 // Each ally hero as well as enemy mob is an Unit and they all include
 // mostly the same type of data for use in the gameplay.
 
-public class Unit: NSObject, Printable
+public class Unit: GameObject, Printable
 {
-  // MARK: Attributes
 
+  // MARK: Attributes
   public var name: String
+
+  // Unique ID
+  public let id: String = NSUUID().UUIDString
 
   // Constitution has two different attributes, for tracking the max value 
   // as well.
@@ -27,27 +30,26 @@ public class Unit: NSObject, Printable
   // Strength determines how much damage we deal in combat
   public var strength: Int
 
-
   // MARK: Initializers
 
-  public init(name: String, constitution: Int, strength: Int) {
+  public init(name: String, constitution: Int, strength: Int, owner: Player) {
     self.name = name
     self.constitution = constitution
     self.maxConstitution = constitution
     self.strength = strength
 
-    super.init()
+    super.init(battle: owner.battle)
   }
 
   // MARK: Protocols
 
   public override var description: String {
-    return "[Unit: \(name) \(constitution)/\(maxConstitution) CON, \(strength) STR]"
+    return "\(name)"
   }
 
 }
 
-// MARK: Unit Combat
+// MARK: Combat
 
 public extension Unit {
 
@@ -65,15 +67,19 @@ public extension Unit {
     }
   }
 
-  public func damage(amount: Int) {
+  public func damage(amount: Int, source: Unit?) {
     // We can only go down to 0 health
     constitution = max(constitution - amount, 0)
 
-    NSLog("Unit \(name) takes \(amount) damage.")
+    NSLog("Unit \(name) takes \(amount) damage from \(source?.name).")
 
     if constitution == 0 {
       NSLog("Unit \(name) has died.")
     }
+
+    fireEvent(GameEvent.UNIT_DAMAGED, params: nil)
+
+    battle.handleDamage()
   }
 
   public func heal(amount: Int) {
@@ -88,4 +94,13 @@ public extension Unit {
     }
   }
 
+  public func destroy() {
+    damage(maxConstitution, source: nil)
+  }
+
+}
+
+
+public func == (lhs: Unit, rhs: Unit) -> Bool {
+  return (lhs.id == rhs.id)
 }
