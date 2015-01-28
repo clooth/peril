@@ -32,13 +32,19 @@ public class Unit: GameObject, Printable
 
   // MARK: Initializers
 
-  public init(name: String, constitution: Int, strength: Int, owner: Player) {
+  public init(name: String, constitution: Int, strength: Int, battle: Battle) {
     self.name = name
     self.constitution = constitution
     self.maxConstitution = constitution
     self.strength = strength
 
-    super.init(battle: owner.battle)
+    super.init(battle: battle)
+
+    self.bindEvent(GameEvent.BOARD_MOVE_MATCHED) { (battle, params) -> Void in
+      if let chain = params["chain"] as? Chain {
+        self.attackRandomEnemy()
+      }
+    }
   }
 
   // MARK: Protocols
@@ -46,8 +52,8 @@ public class Unit: GameObject, Printable
   public override var description: String {
     return "\(name)"
   }
-
 }
+
 
 // MARK: Combat
 
@@ -77,7 +83,7 @@ public extension Unit {
       NSLog("Unit \(name) has died.")
     }
 
-    fireEvent(GameEvent.UNIT_DAMAGED, params: nil)
+    fireEvent(GameEvent.UNIT_DAMAGED)
 
     battle.handleDamage()
   }
@@ -96,6 +102,31 @@ public extension Unit {
 
   public func destroy() {
     damage(maxConstitution, source: nil)
+  }
+
+  // MARK: Attacking enemies
+
+  public func attackRandomEnemy() {
+    if let owner = self.owner? {
+      if let opponent = owner.opponent? {
+        attackUnit(opponent.party.randomUnit())
+      }
+    }
+  }
+
+  public func healRandomAlly(amount: Int) {
+    if let unit = self.owner?.party.randomUnit() {
+      attackUnit(unit)
+    }
+    self.owner?.party.randomUnit().heal(amount)
+  }
+
+  public func attackUnit(unit: Unit) {
+    unit.damage(self.strength, source: self)
+  }
+
+  public func healUnit(unit: Unit, amount: Int) {
+    unit.heal(amount)
   }
 
 }

@@ -9,7 +9,7 @@
 import Foundation
 import Dollar
 
-public typealias EventHandlerClosure = (battle: Battle, params: [String: GameObject]) -> Void
+public typealias EventHandlerClosure = (battle: Battle, params: [String: AnyObject]) -> Void
 
 // EventManager handles the forwarding and binding of events and their
 // listener objects
@@ -39,10 +39,10 @@ public class GameObject: NSObject {
     }
   }
 
-  public func fireEvent(gameEvent: GameEvent, params: [String: GameObject]? = [:]) {
+  public func fireEvent(gameEvent: GameEvent, params: [String: AnyObject] = [:]) {
     if let eventTriggers = triggers[gameEvent] {
       for trigger in eventTriggers {
-        trigger(battle: battle, params: params!)
+        trigger(battle: battle, params: params)
         println("Fired event for \(gameEvent)")
       }
     }

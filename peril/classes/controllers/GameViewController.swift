@@ -30,19 +30,24 @@ class GameViewController: UIViewController {
     // No multitouch support (yet)
     let skView = view as SKView
     skView.multipleTouchEnabled = false
+    skView.showsFPS = true
+    skView.showsNodeCount = true
+    skView.ignoresSiblingOrder = true
 
     // Create and configure the scene.
-    scene = GameScene()
+    scene = GameScene(size: skView.bounds.size)
     scene.scaleMode = .AspectFill
 
     // Present the scene.
     skView.presentScene(scene)
+
+    scene.boardNode.animateInitialBoard { () -> () in
+    }
+    scene.shuffle()
   }
 
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-
-    animateLabels()
   }
 
   override func shouldAutorotate() -> Bool {

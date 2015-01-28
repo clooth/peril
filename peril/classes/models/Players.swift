@@ -30,6 +30,8 @@ public class Player: GameObject, Printable {
 
     super.init(battle: battle)
 
+    self.party.owner = self
+
     // MARK: Default Events
     self.bindEvent(.TURN_STARTED, handler: { (battle, params) -> Void in
       println("TURN STARTED YO")

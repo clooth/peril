@@ -21,6 +21,12 @@ public enum GameEvent: Int, Printable
   case TURN_STARTED
   case TURN_ENDED
 
+  // MARK: Board Events
+  case BOARD_MOVE_STARTED
+  case BOARD_MOVE_MATCHED
+  case BOARD_MOVE_FAILED
+  case BOARD_MOVE_ENDED
+
   // MARK: Unit Events
   case UNIT_ATTACKED
   case UNIT_DAMAGED
@@ -37,6 +43,11 @@ public enum GameEvent: Int, Printable
 
     case .TURN_STARTED: return "Turn Started"
     case .TURN_ENDED: return "Turn Ended"
+
+    case .BOARD_MOVE_STARTED: return "Board Move Started"
+    case .BOARD_MOVE_MATCHED: return "Board Move Matched"
+    case .BOARD_MOVE_FAILED: return "Board Move Failed"
+    case .BOARD_MOVE_ENDED: return "Board Move Ended"
 
     case .UNIT_ATTACKED: return "Unit Attacked"
     case .UNIT_DAMAGED: return "Unit Damaged"

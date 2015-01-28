@@ -15,7 +15,11 @@ public class Party: NSObject, Printable
 {
   // MARK: Attributes
 
+  // All the units in this party
   public var units: [Unit]
+
+  // Owning player
+  public var owner: Player?
 
   // MARK: Initializers
 
@@ -38,6 +42,16 @@ public extension Party {
 
   public func randomUnit() -> Unit {
     return $.sample(units)
+  }
+
+  public func randomDamagedUnit() -> Unit {
+    return $.sample(damagedUnits())
+  }
+
+  public func damagedUnits() -> [Unit] {
+    return units.filter({ (unit: Unit) -> Bool in
+      return unit.isDamaged
+    })
   }
 
   public func weakestUnit() -> Unit {
@@ -68,7 +82,19 @@ public extension Party {
     }
   }
 
+  public func addUnit(unit: Unit) {
+    unit.owner = self.owner
+    println(unit.owner)
+    self.units.append(unit)
+  }
+
   public func removeUnit(unit: Unit) {
     units = units.filter( {$0 != unit} )
+  }
+
+  // MARK: Helpers
+
+  public func forEachUnit(callback: (unit: Unit) -> Void) -> Void {
+    units.map(callback)
   }
 }
